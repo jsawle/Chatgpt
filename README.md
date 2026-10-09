@@ -1,31 +1,15 @@
-# Epicentre Lab v0.1.0
+# Epicentre Lab v0.2.0
+Replace epicentre-lab.html in your GitHub Pages repository with the supplied file. No build step. Publishing is not performed here.
 
-A single-file ArcGIS 3D classroom prototype matching the dark style of Earth Structure Lab.
+## Changes
+- New workspace layout: compact left controls, unobstructed globe, three recording cards side by side beneath it.
+- All three recordings visible without scrolling on desktop layouts at 1366x768 and larger. Controls may scroll on short screens; mobile stacks the cards for readable traces.
+- Fictional station names West Ridge, North Peak and South Shore, matching the globe labels. Coordinates are unchanged from v0.1.0. These are not real monitoring stations.
+- Circle checkboxes moved into the corresponding recording cards.
+- Compact playback within the map; teacher notes in a dialog.
 
-## Host on GitHub Pages
-Upload `epicentre-lab.html` to the existing Pages-enabled curriculum_artifacts repository. Open that filename under the existing Pages site. No build step or backend is required. Publishing has not been performed here.
-
-## Features
-- Four-step learning sequence: arrivals, S-P measurement, circles, location.
-- Synthetic seismograms with mouse/touch picks and keyboard-accessible numeric inputs.
-- One, two or three station circles, with optional S-P uncertainty bounds.
-- Animated P/S travel-distance rings, playback and scrubbing.
-- Explore and challenge modes; challenge hides source and travelling rings.
-- Three invented Mediterranean scenarios, map-click estimates, teacher notes and sources.
-
-## Scientific scope
-All events, stations and waveforms are synthetic. P=6 km/s and S=3.5 km/s are illustrative constant parameters. The model uses spherical great-circle surface distance consistently for arrival times and circles. It ignores depth, refraction and Earth's layered velocity structure. Animated rings are travel-distance analogies, not physical surface waves. This is an epicentre teaching model, not a real earthquake locator. The hypocentre is explained but not rendered or solved. Amplitude is arbitrary.
-
-## Dependencies and privacy
-ArcGIS Maps SDK for JavaScript 5.1 is loaded from js.arcgis.com. Satellite basemap requests need internet access and WebGL. No sign-in, telemetry, student-data storage or API key is implemented. External providers receive normal network requests. The app provides timing activities even if the 3D SDK fails.
-
-## Classroom use
-Start in Explore and play. Measure P/S, draw circles, then estimate. Use Find it yourself for independent practice. Exact model picks are an explicitly labelled teaching aid. Use one circle to discuss distance versus direction, two for ambiguity, three for agreement. Add uncertainty and critique assumptions.
+## Model
+All events, traces and arrivals are synthetic. Constant illustrative speeds P=6 km/s and S=3.5 km/s; spherical great-circle surface distance. Depth and refraction omitted. Animated rings are travel-distance analogies, not physical surface waves. The S-P uncertainty slider applies to the measured gap. No student data is stored.
 
 ## Validation
-Mathematical consistency and JavaScript syntax were checked during creation. Offline Chromium tests passed for initialization, SDK failure fallback, model picks, station toggles, challenge mode, manual and invalid timing, teacher dialog and mobile horizontal overflow. Live ArcGIS/WebGL rendering was not tested. Full browser/WebGL, school-device, screen-reader and GitHub Pages deployment testing remains necessary. Verify basemap loading, map labels, all scenarios, touch picking, small screens and challenge mode before classroom use.
-
-## Sources
-- USGS: The Science of Earthquakes — https://www.usgs.gov/programs/earthquake-hazards/science-earthquakes
-- USGS: Earthquake Travel Times — https://www.usgs.gov/programs/earthquake-hazards/earthquake-travel-times
-- ArcGIS Scene documentation — https://developers.arcgis.com/javascript/latest/references/map-components/components/arcgis-scene/
+Offline Chromium checks passed: all three cards visible without scrolling at 1280x720, 1366x768 and 1900x900; syntax, model picks, circle toggles, challenge mode, input validation, teacher notes and mobile horizontal width. Live ArcGIS SDK and WebGL rendering require testing after hosting. External internet requests to the ArcGIS SDK and satellite basemap are required.
