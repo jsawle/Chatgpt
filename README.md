@@ -1,26 +1,8 @@
-# Epicentre Lab v0.3.0
-Upload epicentre-lab.html to replace the existing GitHub Pages file. No build step. Publishing has not been performed.
+# Epicentre Lab v0.4.0: clarity update
+Replace epicentre-lab.html in the GitHub Pages repository. No build step. Publishing not performed.
 
-## New features
-Transparent globe; underground focus and surface epicentre joined by a depth line; expanding wireframe P/S fronts in Earth-centred 3D; moving direct-ray markers; adjustable synthetic depth 20-600 km; station distance spheres; location and depth solver; East Point fourth timing reference to distinguish the two three-sphere candidates. The three original traces remain visible side by side on tested desktop sizes. The fourth observation is a numeric S-P gap, not a fourth seismogram.
+UI changes: step-specific controls; plain-language stage titles; Next buttons; explicit Surface / Inside Earth modes; orange diamond focus versus white surface epicentre; separated label offsets; persistent symbol key; current-time explanation; optional expanding wireframes (moving direct-ray markers remain the default); event/answer controls collapsed; three recording cards remain side by side on desktop.
 
-## Try it
-1. Explore: play or scrub waves; use See through the globe and Oblique view.
-2. Change source depth; synthetic arrivals recalculate.
-3. Use model picks, then step 3 to display distance spheres.
-4. Calculate focus. Compare latitude, longitude and depth with Reveal.
-5. Clear East Point timing and calculate to demonstrate candidate ambiguity where present.
+Model unchanged from v0.3: synthetic constant-speed spherical Earth, straight-ray distances, three sphere candidates and fourth timing to select depth. Refraction, depth phases and confidence intervals are not simulated.
 
-## Model and limitations
-All observations are synthetic. P=6 km/s and S=3.5 km/s in a homogeneous spherical Earth of radius 6371 km. Straight Cartesian chord distance to the focus generates the arrivals. S-P gap times 8.4 gives the sphere radius. Three sphere equations give two candidates; fourth timing and a 0-700 km interior range select the candidate. Depth is Earth radius minus focus radial distance. This is a geometric teaching solver, not a real noisy-data least-squares seismic locator. No confidence interval is calculated. The uncertainty slider bounds station distances only. Refraction, reflection, depth phases, core effects and attenuation are omitted. Wavefront parts outside Earth are mathematical extensions, not waves in air. The geographic rendering uses the SDK globe; the mathematical model is spherical.
-
-## Validation
-JavaScript syntax and offline Chromium interaction tests passed. Exact synthetic picks recovered depths 20,120,300,600 km in each of three scenarios (12 combinations). Three cards fit at 1280x720,1366x768,1900x900. Live ArcGIS SDK/WebGL rendering, underground visibility and animation performance have NOT been validated here. Test after hosting before classroom use.
-
-## Science sources
-USGS: Determining the Depth of an Earthquake
-https://www.usgs.gov/programs/earthquake-hazards/determining-depth-earthquake
-USGS: The effect of S-wave arrival times on the accuracy of hypocenter estimation
-https://www.usgs.gov/publications/effect-s-wave-arrival-times-accuracy-hypocenter-estimation
-ArcGIS: Underground navigation in global mode
-https://developers.arcgis.com/javascript/latest/sample-code/scene-underground/
+Validation: JavaScript syntax and offline Chromium tests passed for progressive controls, view labels, Next navigation, 120 km depth recovery, desktop card visibility at 1280x720/1366x768/1900x900, challenge, manual timing and mobile horizontal width. Live ArcGIS/WebGL rendering and source-label separation have not been validated here. Test hosted version before classroom use.
