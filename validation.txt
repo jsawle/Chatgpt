@@ -1,0 +1,1 @@
+PASS: rendered blue/orange wave pixels {'blue': 1112, 'orange': 1059} ; depth recovery; arrival auto-pause; chapter controls; mobile width; no JS errors

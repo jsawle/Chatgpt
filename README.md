@@ -1,6 +1,10 @@
-# Epicentre Lab v0.5.0
-Replace epicentre-lab.html in the existing GitHub Pages repository.
+# Earthquake Theatre v1.0
+Replace your hosted epicentre-lab.html with the file in this package. Or open it directly in a modern browser. No dependencies or build step.
 
-This revision removes explanatory overlays from the globe. The scene, heading, legend and playback now occupy separate layout rows. Duplicate status text is hidden. Surface view is opaque by default; Inside Earth switches to transparency and requests an oblique camera. Focus label is omitted in surface view. View controls remain available in every step. Three original recording cards remain side by side on desktop. The source/depth model is unchanged.
+Complete UI rebuild: large rotatable regional curved-Earth cutaway; P/S wavefronts visible by default; three chapters Watch/Measure/Solve; evidence desk appears only when needed; automatic pauses at station arrivals; numeric and trace picks; staged distance spheres; fourth-station timing; latitude/longitude/depth calculation; schematic globe context; keyboard rotation with arrows and zoom with +/-.
 
-Validation: JavaScript syntax and offline browser checks passed for view controls, progressive navigation, 120 km depth solve, manual picks, challenge, three desktop card layouts and mobile width. Live ArcGIS/WebGL rendering and camera framing were not verified. This revision addresses interface obstruction; it does not replace transparency with a true cutaway or add realistic seismic refraction. No claim of classroom usability validation is made.
+Starts paused at 24 seconds to make waves immediately visible. Restart begins at zero. Watch is a teaching demonstration, not a hidden-source challenge. This version uses one fixed synthetic event at 39 N,10 E,120 km depth. Adjustable scenarios/depth and uncertainty controls from the earlier prototype are not included. Globe context is schematic, without satellite imagery or continents. Geometry is 3D Cartesian, rendered using a custom Canvas projection rather than WebGL. Wireframes and cut faces are explanatory; this is not a photorealistic volumetric renderer.
+
+Model: spherical Earth radius 6371 km; homogeneous P=6 km/s,S=3.5 km/s; straight chord distances; three sphere candidates and fourth distance select the focus. Depth=radius minus radial distance. No refraction, reflections, core effects, noisy-data least-squares fit or confidence interval.
+
+Validation: offline Chromium rendered both wave colours; tested 120 km depth recovery, arrival auto-pause, chapter navigation, mobile width and no JS errors. Browser screenshots inspected. Not tested with students or across all browsers.
