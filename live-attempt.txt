@@ -1,0 +1,2 @@
+Geographic scene unavailable: ArcGIS SDK 5.1 did not load. Measurement and calculation still work.
+False

@@ -1,0 +1,1 @@
+PASS: offline UI, 120 km solve, view controls, locator visibility and explicit SDK failure. Live SDK/network rendering NOT tested.
